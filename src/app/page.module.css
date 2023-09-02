@@ -1,0 +1,15 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 35px;
+  gap: 25px;
+  flex: 0.7;
+}

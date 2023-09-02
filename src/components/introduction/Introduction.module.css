@@ -1,0 +1,45 @@
+.introduction {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  gap: 20px;
+  gap: 50px;
+}
+
+.about {
+  font-size: 65px;
+  color: #606887;
+  width: 30%;
+  border-bottom: 2px solid #787878;
+}
+
+.context {
+  font-size: 20px;
+  color: #787878;
+  width: 80%;
+}
+
+.experience {
+  display: flex;
+  flex-direction: row;
+  gap: 10%;
+  color: #606887;
+}
+
+.option {
+  cursor: pointer;
+}
+
+.option::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #606887;
+  transition: width 0.5s;
+}
+
+.option:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}

@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Poppins&display=swap");
+
+html,
+body {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  overscroll-behavior: none;
+}

@@ -33,7 +33,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 7rem;
+  height: 150px;
   border: 1px solid black;
   border-radius: 0.2rem;
   position: relative;
@@ -42,7 +42,7 @@
 .image {
   cursor: pointer;
   overflow: hidden;
-  padding: 1rem;
+  /* padding: 1rem; */
   background-image: url("../../assets//overlay.png");
 }
 
@@ -88,6 +88,11 @@
 }
 
 .projectDesc {
+  font-size: 0.7rem;
+  color: #787878;
+}
+
+.projectTech {
   font-size: 0.7rem;
   color: #787878;
   margin-bottom: 30px;

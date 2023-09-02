@@ -6,11 +6,14 @@ import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import infodatLogo from "../../assets/infodat-logo-new.png";
 import mainbridgeLogo from "../../assets/Mainbridge-Logo-White.png";
+import ThemeParkDatabase from "../../assets/theme-park-database-2.jpeg";
+import FuelQuoteGenerator from "../../assets/fuel-quote-generator.jpeg";
 
 interface ProjectProps {
   id: string;
   title: string;
   description: string;
+  technology: string;
   img: StaticImageData;
   url: string;
 }
@@ -18,17 +21,19 @@ interface ProjectProps {
 const mockProjects = [
   {
     id: "1",
-    title: "Infodat",
+    title: "Infodat Internship",
     description:
-      "An intuitive and interactive UI utilizing React.js to optimize the internal assessment process.",
+      "Developed an intuitive and interactive UI to optimize the internal assessment process.",
+    techonology: "React.js, TypeScript, Jest.",
     img: infodatLogo,
     url: "https://www.infodatinc.com/",
   },
   {
     id: "2",
-    title: "Mainbridge Health Partners",
+    title: "Mainbridge Health Partners Internship",
     description:
-      "A management application using ASP.NET MVC to effectively manage patient and doctor records and streamline hospital operations.",
+      "Built a management application to effectively manage patient and doctor records and streamline hospital operations.",
+    techonology: "ASP.NET MVC, MSSQL.",
     img: mainbridgeLogo,
     url: "https://www.mainbridgehp.com/",
   },
@@ -37,22 +42,24 @@ const mockProjects = [
     id: "3",
     title: "Fuel Quote Generator",
     description:
-      "Full-stack application ultilizing React.js, Express.js, and MySQL to generate fuel quote based on client location, history, requested gallons, etc.",
-    img: infodatLogo,
+      "Implement a full-stack application to generate fuel quote based on client location, history, requested gallons, etc.",
+    techonology: "React.js, Express.js, MySQL.",
+    img: FuelQuoteGenerator,
     url: "https://github.com/tranlac2210/COSC-4353-Project",
   },
   {
     id: "4",
     title: "Amusement Park Website | Back-end",
     description:
-      "Complete set of REST API endpoints for process web client requests using ASP.NET Core.",
-    img: infodatLogo,
+      "Wrote a complete set of REST API endpoints for process web client requests.",
+    techonology: "ASP.NET Core.",
+    img: ThemeParkDatabase,
     url: "https://github.com/chuongtran01/Park-Database",
   },
 ];
 
 const Project = (props: ProjectProps) => {
-  const { id, title, description, img, url } = props;
+  const { id, title, description, img, url, technology } = props;
 
   return (
     <article key={id} className={styles.project}>
@@ -62,7 +69,7 @@ const Project = (props: ProjectProps) => {
           src={img}
           alt={title}
           width={300}
-          height={100}
+          height={150}
         />
         <div className={styles.view}>View</div>
       </Link>
@@ -70,6 +77,9 @@ const Project = (props: ProjectProps) => {
       <div className={styles.titleDescContainer}>
         <div className={styles.projectTitle}>{title}</div>
         <div className={styles.projectDesc}>{description}</div>
+        <div className={styles.projectTech}>
+          <b>Technologies:</b> {technology}
+        </div>
       </div>
     </article>
   );
@@ -85,6 +95,7 @@ export default function PersonalProject() {
             key={project.id}
             id={project.id}
             title={project.title}
+            technology={project.techonology}
             description={project.description}
             img={project.img}
             url={project.url}

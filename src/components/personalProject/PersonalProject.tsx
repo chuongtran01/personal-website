@@ -52,7 +52,7 @@ const mockProjects = [
     title: "Amusement Park Website | Back-end",
     description:
       "Wrote a complete set of REST API endpoints for process web client requests.",
-    techonology: "ASP.NET Core.",
+    techonology: "ASP.NET Core, MySQL.",
     img: ThemeParkDatabase,
     url: "https://github.com/chuongtran01/Park-Database",
   },

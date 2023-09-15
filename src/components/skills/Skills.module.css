@@ -1,0 +1,24 @@
+.introduction {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  gap: 20px;
+  gap: 50px;
+}
+
+.about {
+  font-size: 65px;
+  color: #606887;
+  width: 50%;
+  border-bottom: 2px solid #787878;
+}
+
+.context {
+  font-size: 20px;
+  color: #787878;
+  width: 100%;
+}
+
+.list {
+  padding-left: 10px;
+}
